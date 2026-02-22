@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oráculo Astrológico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Blob fixo no viewport: não rola com a página; topo + borda direita -->
+  <div class="blob-background" aria-hidden="true">
+    <svg class="hero__blob hero__blob--fixed" viewBox="0 0 526 809" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="hero-blob-gradient" x1="21.2047" y1="809.175" x2="692.571" y2="219.832" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#A93B4B"/>
+        <stop offset="0.255164" stop-color="#B44A5A"/>
+        <stop offset="1" stop-color="#FFA7B4"/>
+      </linearGradient>
+    </defs>
+    <path d="M227.798 773.774C-231.061 637.638 115.186 111.612 297.368 0H525.596L525.596 611.612L525.596 708.709L525.596 799.218C488.898 806.229 406.077 826.667 227.798 773.774Z" fill="url(#hero-blob-gradient)"/>
+    </svg>
+  </div>
+  <div class="landing-page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">Oráculo Astrológico</div>
+      <nav class="header__nav">
+        <a href="#home" class="header__nav-link header__nav-link--active">Home</a>
+        <a href="#proposta" class="header__nav-link">Proposta</a>
+        <a href="#beneficios" class="header__nav-link">Benefícios</a>
+        <a href="#kit" class="header__nav-link">Kit</a>
+        <a href="#formas-de-usar" class="header__nav-link">Formas de usar</a>
+      </nav>
+      <div class="header__social">
+        <a href="#" class="header__social-link" aria-label="Instagram">
+          <img src="assets/icon-instagram.svg" alt="Instagram" width="24" height="24">
+        </a>
+        <a href="#" class="header__social-link" aria-label="YouTube">
+          <img src="assets/icon-youtube.svg" alt="YouTube" width="32" height="32">
+        </a>
+        <a href="#" class="header__social-link" aria-label="Substack">
+          <img src="assets/icon-substack.svg" alt="Substack" width="22" height="25">
+        </a>
+      </div>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section id="home" class="hero">
+      <div class="hero__left">
+        <div class="hero__title-wrapper">
+          <h1 class="hero__title">
+            <span class="hero__title--bold">Transforme</span>
+            <span class="hero__title--light"> suas dúvidas</span><br>
+            <span class="hero__title--light">em </span><span class="hero__title-highlight-wrap">
+            <span class="hero__title--highlight">clareza</span>
+            <svg class="hero__underline" viewBox="0 0 262 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="262" height="20">
+              <rect x="0" y="0" width="262" height="20" fill="#F8FF94"/>
+            </svg>
+          </span>
+        </div>
+        <p class="hero__subtitle">
+          Um oráculo astrológico criado para ajudar você a se escutar, refletir e encontrar caminhos mais alinhados através da sabedoria simbólica dos astros.
+        </p>
+        <a href="#" class="hero__cta">
+          <span>quero meu oráculo astrológico</span>
+        </a>
+      </div>
+      <div class="hero__right">
+        <div class="hero__blob-wrapper">
+          <img src="assets/hero-cards.png" alt="Cartas do Oráculo Astrológico" class="hero__cards-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Proposta (full-bleed: fora do container para fundo de borda a borda) -->
+  </div>
+  <section id="proposta" class="about">
+    <div class="about__inner">
+      <div class="about__images">
+        <img src="assets/card-casa9.png" alt="Carta Casa 9" class="about__card about__card--back">
+        <img src="assets/card-verso.png" alt="Verso da carta" class="about__card about__card--front">
+      </div>
+      <div class="about__content">
+        <div class="about__title-wrapper">
+          <h2 class="about__title">
+            <span class="about__title--bold">Aprenda astrologia</span><br>
+            <span class="about__title-highlight-wrap">
+              <span class="about__title--highlight">vivendo a astrologia</span>
+              <svg class="about__underline-inner" viewBox="0 0 262 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="262" height="20">
+                <rect x="0" y="0" width="262" height="20" fill="#F8FF94"/>
+              </svg>
+            </span>
+          </h2>
+        </div>
+        <div class="about__text">
+          <p>O Oráculo Astrológico é um conjunto de cartas físicas que representam os principais elementos astrológicos (signos, planetas e casas), convidando você a explorar seus símbolos e aplicá-los à sua própria vida.</p>
+          <p><strong>O oráculo é ferramenta de reflexão,</strong> criada para ajudá-la a fazer perguntas melhores, reconhecer padrões e aprofundar sua compreensão de si mesma por meio da linguagem simbólica dos astros de forma intuitiva, reveladora e prática.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function () {
+      var nav = document.querySelector('.header__nav');
+      var links = nav ? nav.querySelectorAll('.header__nav-link[href^="#"]') : [];
+      var blobEl = document.querySelector('.blob-background');
+      var heroSection = document.getElementById('home');
+
+      function setActiveFromScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        var viewportMid = y + window.innerHeight * 0.4;
+        var currentId = 'home';
+        links.forEach(function (link) {
+          var id = (link.getAttribute('href') || '').slice(1);
+          if (!id) return;
+          var section = document.getElementById(id);
+          if (!section) return;
+          var rect = section.getBoundingClientRect();
+          var sectionTop = rect.top + y;
+          if (sectionTop <= viewportMid) currentId = id;
+        });
+        links.forEach(function (link) {
+          var id = (link.getAttribute('href') || '').slice(1);
+          link.classList.toggle('header__nav-link--active', id === currentId);
+        });
+      }
+
+      function setBlobVisibility() {
+        if (!blobEl || !heroSection) return;
+        var heroBottom = heroSection.getBoundingClientRect().bottom;
+        var pastHero = heroBottom < 0;
+        blobEl.classList.toggle('blob-background--hidden', pastHero);
+      }
+
+      function onScroll() {
+        setActiveFromScroll();
+        setBlobVisibility();
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', onScroll);
+      if (document.readyState === 'complete') onScroll(); else window.addEventListener('DOMContentLoaded', onScroll);
+    })();
+  </script>
+</body>
+</html>

@@ -26,52 +26,58 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__logo">Oráculo Astrológico</div>
+      <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="header__nav">
         <a href="#home" class="header__nav-link header__nav-link--active">Home</a>
         <a href="#proposta" class="header__nav-link">Proposta</a>
         <a href="#beneficios" class="header__nav-link">Benefícios</a>
         <a href="#kit" class="header__nav-link">Kit</a>
         <a href="#formas-de-usar" class="header__nav-link">Formas de usar</a>
+        <div class="header__social">
+          <a href="#" class="header__social-link" aria-label="Instagram">
+            <img src="assets/icon-instagram.svg" alt="Instagram" width="24" height="24">
+          </a>
+          <a href="#" class="header__social-link" aria-label="YouTube">
+            <img src="assets/icon-youtube.svg" alt="YouTube" width="32" height="32">
+          </a>
+          <a href="#" class="header__social-link" aria-label="Substack">
+            <img src="assets/icon-substack.svg" alt="Substack" width="22" height="25">
+          </a>
+        </div>
       </nav>
-      <div class="header__social">
-        <a href="#" class="header__social-link" aria-label="Instagram">
-          <img src="assets/icon-instagram.svg" alt="Instagram" width="24" height="24">
-        </a>
-        <a href="#" class="header__social-link" aria-label="YouTube">
-          <img src="assets/icon-youtube.svg" alt="YouTube" width="32" height="32">
-        </a>
-        <a href="#" class="header__social-link" aria-label="Substack">
-          <img src="assets/icon-substack.svg" alt="Substack" width="22" height="25">
-        </a>
-      </div>
     </div>
   </header>
   <div class="landing-page">
     <!-- Section 1: Hero -->
     <section id="home" class="hero">
-      <div class="hero__left">
-        <div class="hero__title-wrapper">
-          <h1 class="hero__title">
-            <span class="hero__title--bold">Transforme</span>
-            <span class="hero__title--light"> suas dúvidas</span><br>
-            <span class="hero__title--light">em </span><span class="hero__title-highlight-wrap">
-            <span class="hero__title--highlight">clareza</span>
-            <svg class="hero__underline" viewBox="0 0 262 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="262" height="20">
-              <rect x="0" y="0" width="262" height="20" fill="#F8FF94"/>
-            </svg>
+      <div class="hero__title-wrapper">
+        <h1 class="hero__title">
+          <span class="hero__title--bold">Transforme</span>
+          <span class="hero__title--light"> suas</span><br>
+          <span class="hero__title--light">dúvidas em </span><span class="hero__title-highlight-wrap">
+          <span class="hero__title--highlight">clareza</span>
+          <svg class="hero__underline" viewBox="0 0 262 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <rect x="0" y="0" width="262" height="20" fill="#F8FF94"/>
+          </svg>
           </span>
+        </h1>
+      </div>
+      <div class="hero__right">
+        <div class="hero__blob-wrapper">
+          <img src="assets/hero-cards.png" alt="Cartas do Oráculo Astrológico" class="hero__cards-image">
         </div>
+      </div>
+      <div class="hero__content">
         <p class="hero__subtitle">
           Um oráculo astrológico criado para ajudar você a se escutar, refletir e encontrar caminhos mais alinhados através da sabedoria simbólica dos astros.
         </p>
         <a href="#" class="hero__cta">
           <span>quero meu oráculo astrológico</span>
         </a>
-      </div>
-      <div class="hero__right">
-        <div class="hero__blob-wrapper">
-          <img src="assets/hero-cards.png" alt="Cartas do Oráculo Astrológico" class="hero__cards-image">
-        </div>
       </div>
     </section>
 
@@ -80,8 +86,8 @@
   <section id="proposta" class="about">
     <div class="about__inner">
       <div class="about__images">
-        <img src="assets/card-casa9.png" alt="Carta Casa 9" class="about__card about__card--back">
-        <img src="assets/card-verso.png" alt="Verso da carta" class="about__card about__card--front">
+        <img src="assets/card-casa9.png" alt="Carta Casa 9" class="about__card about__card--back" loading="lazy">
+        <img src="assets/card-verso.png" alt="Verso da carta" class="about__card about__card--front" loading="lazy">
       </div>
       <div class="about__content">
         <div class="about__title-wrapper">
@@ -182,7 +188,7 @@
         </a>
       </div>
       <div class="kit__image">
-        <img src="assets/amostra-cartas.png" alt="Amostra das cartas do oráculo astrológico" class="kit__sample-image">
+        <img src="assets/amostra-cartas.png" alt="Amostra das cartas do oráculo astrológico" class="kit__sample-image" loading="lazy">
       </div>
     </div>
   </section>
@@ -222,7 +228,7 @@
       <div class="creator__photo-wrapper">
         <img src="assets/creator-blob.svg" alt="" class="creator__blob" aria-hidden="true">
         <img src="assets/creator-circle.svg" alt="" class="creator__circle" aria-hidden="true">
-        <img src="assets/creator-photo.png" alt="Renata Matos, criadora do Oráculo Astrológico" class="creator__photo">
+        <img src="assets/creator-photo.png" alt="Renata Matos, criadora do Oráculo Astrológico" class="creator__photo" loading="lazy">
       </div>
       <div class="creator__content">
         <h2 class="creator__title">
@@ -266,7 +272,7 @@
         <p class="cta-final__footer-text">Encomende hoje mesmo e comece a explorar os padrões cósmicos dentro de si. Envio para todo o Brasil.</p>
       </div>
       <div class="cta-final__image">
-        <img src="assets/cta-cards.png" alt="Cartas do Oráculo" class="cta-final__cards">
+        <img src="assets/cta-cards.png" alt="Cartas do Oráculo" class="cta-final__cards" loading="lazy">
       </div>
     </div>
   </section>
@@ -285,9 +291,32 @@
   <script>
     (function () {
       var nav = document.querySelector('.header__nav');
+      var menuToggle = document.querySelector('.header__menu-toggle');
       var links = nav ? nav.querySelectorAll('.header__nav-link[href^="#"]') : [];
+      var socialLinks = nav ? nav.querySelectorAll('.header__social-link') : [];
       var blobEl = document.querySelector('.blob-background');
       var heroSection = document.getElementById('home');
+
+      /* Hamburger menu toggle */
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('header__nav--open');
+          menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+        /* Close menu when a nav link or social link is clicked */
+        links.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('header__nav--open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+        socialLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('header__nav--open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
 
       function setActiveFromScroll() {
         var y = window.scrollY || window.pageYOffset;

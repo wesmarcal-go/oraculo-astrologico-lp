@@ -23,9 +23,8 @@
     <path d="M227.798 773.774C-231.061 637.638 115.186 111.612 297.368 0H525.596L525.596 611.612L525.596 708.709L525.596 799.218C488.898 806.229 406.077 826.667 227.798 773.774Z" fill="url(#hero-blob-gradient)"/>
     </svg>
   </div>
-  <div class="landing-page">
-    <!-- Header -->
-    <header class="header">
+  <header class="header">
+    <div class="header__inner">
       <div class="header__logo">Oráculo Astrológico</div>
       <nav class="header__nav">
         <a href="#home" class="header__nav-link header__nav-link--active">Home</a>
@@ -45,8 +44,9 @@
           <img src="assets/icon-substack.svg" alt="Substack" width="22" height="25">
         </a>
       </div>
-    </header>
-
+    </div>
+  </header>
+  <div class="landing-page">
     <!-- Section 1: Hero -->
     <section id="home" class="hero">
       <div class="hero__left">
@@ -189,18 +189,14 @@
 
   <!-- Section 5: Duas formas de utilizar -->
   <section id="formas-de-usar" class="usage">
+    <div class="usage__bg" aria-hidden="true">
+      <img src="assets/bg-usage-shape.svg" alt="">
+    </div>
     <div class="usage__inner">
-      <div class="usage__bg-shape" aria-hidden="true"></div>
-      <div class="usage__blob" aria-hidden="true"></div>
       <div class="usage__title-col">
         <h2 class="usage__title">
           <span class="usage__title--bold">Duas formas</span><br>
-          <span class="usage__title-highlight-wrap">
-            <span class="usage__title--light">de utilizar</span>
-            <svg class="usage__underline" viewBox="0 0 200 10" fill="none" xmlns="http://www.w3.org/2000/svg" width="200" height="10">
-              <rect x="0" y="0" width="200" height="10" fill="#F8FF94"/>
-            </svg>
-          </span>
+          <span class="usage__title--light">de utilizar</span>
         </h2>
       </div>
       <div class="usage__cards">
@@ -211,7 +207,7 @@
           <p class="usage__card-text usage__card-text--bold">Não é preciso saber astrologia para começar.</p>
         </div>
         <div class="usage__card">
-          <div class="usage__card-number usage__card-number--green">2</div>
+          <div class="usage__card-number usage__card-number--yellow">2</div>
           <h3 class="usage__card-title">ASTRO TAROT</h3>
           <p class="usage__card-text">Para quem já estuda astrologia ou realiza atendimentos (Astrólogas e Tarólogas), <strong>o Oráculo também pode ser utilizado como um Astro Tarot</strong>, uma abordagem para cruzar o simbolismo das cartas com o mapa astral.</p>
           <p class="usage__card-text">Dessa forma você entende também como a pessoa interage com a energia daquela carta, tendo uma <strong>interpretação mais precisa e profunda</strong>, trazendo um novo nível de clareza para as tiragens com as cartas do Oráculo Astrológico.</p>
@@ -255,16 +251,16 @@
               <rect width="98" height="7" fill="#F8FF94"/>
             </svg>
           </div>
-          <p class="cta-final__subtitle">O Oráculo Astrológico completo: Cartas + Guia + Caixa</p>
+          <p class="cta-final__subtitle"><strong>O Oráculo Astrológico completo:</strong><br>Cartas + Guia + Caixa</p>
         </div>
         <div class="cta-final__pricing">
           <div class="cta-final__pricing-text">
-            <span class="cta-final__price-old">Pré-venda de R$ 278,90</span>
+            <span class="cta-final__price-old">Pré-venda de <s>R$ 278,90</s></span>
             <span class="cta-final__price-current">Por R$ 189,90</span>
             <span class="cta-final__installments">Em até 3x sem juros</span>
           </div>
           <a href="#" class="cta-final__button">
-            <span>quero meu oráculo astrológico</span>
+            <span>COMPRAR AGORA</span>
           </a>
         </div>
         <p class="cta-final__footer-text">Encomende hoje mesmo e comece a explorar os padrões cósmicos dentro de si. Envio para todo o Brasil.</p>

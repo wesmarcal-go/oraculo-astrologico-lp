@@ -713,7 +713,7 @@ img {
   line-height: 1.063;
   letter-spacing: -0.48px;
   color: var(--color-dark-purple);
-  text-align: center;
+  text-align: left;
 }
 
 .kit__underline {
@@ -943,7 +943,8 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
   min-height: 280px;
 }
 
@@ -1069,6 +1070,8 @@ img {
   flex-direction: column;
   gap: 2rem;
   order: 1;
+  width: 100%;
+  align-self: stretch;
 }
 
 .cta-final__title-block {
@@ -1087,6 +1090,7 @@ img {
   line-height: 1.063;
   letter-spacing: -0.48px;
   color: var(--color-dark-purple);
+  text-align: left;
 }
 
 .cta-final__title-highlight-wrap {

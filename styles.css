@@ -383,7 +383,7 @@ img {
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--spacing-section) var(--spacing-container);
-  gap: 2.5rem;
+  gap: clamp(1.5rem, 5vw, 2.5rem);
   position: relative;
 }
 
@@ -391,9 +391,9 @@ img {
   position: relative;
   width: 100%;
   max-width: 442px;
-  height: 350px;
+  height: clamp(240px, 60vw, 300px);
   flex-shrink: 0;
-  margin-top: 0;
+  margin: 0 auto;
 }
 
 .about__card {
@@ -402,20 +402,21 @@ img {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* Mobile: par de cartas centralizado (centro do grupo em 50%) */
 .about__card--back {
-  width: 250px;
+  width: min(200px, 55vw);
   height: auto;
-  left: 0;
-  top: 13px;
+  left: calc(50% - 32.5px - min(200px, 55vw) / 2);
+  top: 0.8rem;
   transform: rotate(-0.12deg) scale(1.16);
   z-index: 2;
   box-shadow: none;
 }
 
 .about__card--front {
-  width: 250px;
+  width: min(200px, 55vw);
   height: auto;
-  left: 80px;
+  left: calc(50% + 32.5px - min(200px, 55vw) / 2); /* 65px à direita da back */
   top: 0;
   z-index: 1;
   box-shadow: none;
@@ -425,14 +426,19 @@ img {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 29px;
+  gap: clamp(1.25rem, 4vw, 1.8125rem);
   padding-left: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 3rem; /* mobile e tablet: evita sobreposição com as cartas */
 }
 
 .about__title-wrapper {
   position: relative;
   width: fit-content;
-  text-align: left;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about__title {
@@ -440,7 +446,7 @@ img {
   line-height: 1.063;
   letter-spacing: -0.48px;
   color: var(--color-dark-purple);
-  text-align: left;
+  text-align: center;
 }
 
 .about__title--bold {
@@ -464,16 +470,18 @@ img {
   z-index: 1;
   margin-top: -3px;
   margin-bottom: -3px;
-  height: 90px;
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
 
 .about__underline-inner {
   position: absolute;
-  bottom: 2px;
+  top: 100%;
   left: 0;
-  transform: translateY(-30px);
+  width: 100%;
+  min-width: 100%;
+  height: 10px;
+  margin-top: calc(-2px - 4%); /* mobile: sobe 4% a mais */
   z-index: 0;
   pointer-events: none;
 }
@@ -488,8 +496,8 @@ img {
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 808px;
+  gap: 1rem;
+  max-width: 100%;
 }
 
 .about__text p {
@@ -538,11 +546,26 @@ img {
   text-align: center;
 }
 
+/* "dia a dia" em bloco próprio com sublinhado amarelo abaixo e centralizado */
+.benefits__title-highlight-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.benefits__title--highlight {
+  position: relative;
+  z-index: 1;
+}
+
 .benefits__underline {
   position: absolute;
+  top: 100%;
   left: 0;
-  top: 80%;
+  width: 100%;
+  height: 10px;
+  margin-top: -9px;
   z-index: 0;
+  pointer-events: none;
 }
 
 .benefits__cards {
@@ -1255,18 +1278,36 @@ img {
     flex: 0 0 auto;
   }
 
-  /* About: larger images */
-  .about__images {
-    height: 450px;
+  /* About: layout tablet — imagens maiores, cartas proporcionais */
+  .about__inner {
+    gap: 2.5rem;
+    padding: var(--spacing-section) 1.875rem;
   }
 
+  .about__images {
+    height: clamp(320px, 42vw, 380px);
+  }
+
+  /* Tablet: par de cartas centralizado (grupo como um todo) */
+  /* Grupo: back 275px + offset 85px + front 270px ≈ 355px. Centro ≈ 177.5px */
   .about__card--back {
-    width: 340px;
+    width: min(275px, 70%);
+    left: calc(50% - 177.5px);
+    transform: rotate(-0.12deg) scale(1.16);
   }
 
   .about__card--front {
-    width: 335px;
-    left: 107px;
+    width: min(270px, 68%);
+    left: calc(50% - 92.5px); /* 177.5 - 85 (offset) */
+  }
+
+  .about__content {
+    max-width: 560px;
+    margin: 3.5rem auto 0;
+  }
+
+  .about__underline-inner {
+    margin-top: calc(-4px - 4%); /* tablet: sobe 4% a mais */
   }
 
   /* Benefits: 2-column layout */
@@ -1411,6 +1452,29 @@ img {
 
   .about__content {
     padding-left: 40px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .about__title-wrapper {
+    margin: 0;
+    text-align: left;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__title--highlight {
+    text-align: left;
+  }
+
+  .about__underline-inner {
+    margin-top: -2px; /* desktop: posição original */
+  }
+
+  .about__text {
+    max-width: 808px;
   }
 
   /* Benefits: 4-column row */

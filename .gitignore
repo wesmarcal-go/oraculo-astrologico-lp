@@ -21,3 +21,10 @@ dist/
 
 # Vite
 *.local
+
+# Agent / IDE skills (local config)
+.agent/
+.agents/
+.claude/skills/
+.windsurf/
+skills-lock.json
